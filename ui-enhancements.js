@@ -677,6 +677,31 @@
     document.body.prepend(intro);
   }
 
+  function initLocalImagesEnhancement() {
+    const caseCards = document.querySelectorAll("#case-studies .glass-card, .glass-card");
+    const images = [
+      "assets/images/vramp-manufacturing.jpg",
+      "assets/images/devionx-tech.jpg",
+      "assets/images/dermaspace-clinic.jpg",
+      "assets/images/academy-workshop.jpg"
+    ];
+
+    caseCards.forEach((card, idx) => {
+      if (card.querySelector(".calibi-case-img")) return;
+      const imgPath = images[idx % images.length];
+      const img = document.createElement("img");
+      img.src = imgPath;
+      img.alt = "Calibi AI visual asset";
+      img.className = "calibi-case-img";
+      const head = card.querySelector("h3") || card.firstElementChild;
+      if (head) {
+        head.parentNode.insertBefore(img, head);
+      } else {
+        card.prepend(img);
+      }
+    });
+  }
+
   function boot() {
     keepHeaderAlive();
     keepFooterAlive();
@@ -684,6 +709,7 @@
     updateServicesGrid();
     initAiAgentWidget();
     initFlickerIntro();
+    initLocalImagesEnhancement();
     if (!isHomePage) {
       initHeroBrain();
       initPremiumHero();
@@ -701,6 +727,7 @@
         removeHomeBrainLogo();
         updateServicesGrid();
         initAiAgentWidget();
+        initLocalImagesEnhancement();
         if (!isHomePage) {
           initHeroBrain();
           initPremiumHero();
