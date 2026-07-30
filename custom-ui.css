@@ -365,6 +365,24 @@ html.calibi-home-static .text-foreground{
 .calibi-ai-secondary-btn:hover{background:rgba(255,255,255,.1);color:#f8fafc}
 @keyframes calibi-ai-pop{0%{opacity:0;transform:translateY(16px) scale(.94)}100%{opacity:1;transform:translateY(0) scale(1)}}
 
-/* Hide redundant inline calendly / consultation sections */
-#calendly, .calibi-calendly-section { display: none !important; }
+/* AI Flickering Intro / Boot Sequence Overlay */
+.calibi-flicker-intro{position:fixed;inset:0;z-index:2147483647;background:#020617;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem;font-family:'JetBrains Mono',monospace;color:#38bdf8;animation:calibi-intro-dismiss 1.2s ease-in-out 1.4s forwards;pointer-events:none}
+.calibi-flicker-intro:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18),rgba(0,0,0,.18) 1px,transparent 1px,transparent 2px);pointer-events:none;z-index:1}
+.calibi-flicker-box{position:relative;z-index:2;max-width:34rem;width:100%;border:1px solid rgba(56,189,248,.35);border-radius:.85rem;padding:1.6rem;background:rgba(3,7,18,.95);box-shadow:0 0 60px rgba(56,189,248,.28),inset 0 0 24px rgba(56,189,248,.12);animation:calibi-box-flicker .35s steps(3) infinite}
+.calibi-flicker-title{font-size:.85rem;text-transform:uppercase;letter-spacing:.2em;color:#34d399;margin-bottom:.85rem;display:flex;align-items:center;gap:.6rem}
+.calibi-flicker-title span{width:.55rem;height:.55rem;background:#34d399;border-radius:999px;box-shadow:0 0 12px #34d399;animation:calibi-live-dot .8s infinite}
+.calibi-flicker-logs{display:grid;gap:.45rem;font-size:.84rem;color:#94a3b8}
+.calibi-flicker-logs div{opacity:0;animation:calibi-log-appear .2s ease forwards}
+.calibi-flicker-logs div:nth-child(1){animation-delay:.15s}
+.calibi-flicker-logs div:nth-child(2){animation-delay:.4s}
+.calibi-flicker-logs div:nth-child(3){animation-delay:.65s}
+.calibi-flicker-logs div:nth-child(4){animation-delay:.9s;color:#38bdf8;font-weight:700}
+@keyframes calibi-intro-dismiss{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}100%{opacity:0;visibility:hidden;display:none}}
+@keyframes calibi-box-flicker{0%,100%{opacity:.98}50%{opacity:.88}70%{opacity:1}}
+@keyframes calibi-log-appear{to{opacity:1}}
+
+/* Humanized AI Studio Badge */
+.calibi-human-ai-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem .75rem;border-radius:999px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);color:#34d399;font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.12em;margin-bottom:1rem}
+.calibi-human-ai-badge span{width:.45rem;height:.45rem;border-radius:999px;background:#34d399;box-shadow:0 0 10px #34d399}
+
 

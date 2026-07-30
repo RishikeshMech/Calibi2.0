@@ -629,12 +629,35 @@
     }, true);
   }
 
+  function initFlickerIntro() {
+    if (sessionStorage.getItem("calibi_intro_shown") || lowPowerDevice) return;
+    sessionStorage.setItem("calibi_intro_shown", "true");
+
+    const intro = document.createElement("div");
+    intro.className = "calibi-flicker-intro";
+    intro.innerHTML = `
+      <div class="calibi-flicker-box">
+        <div class="calibi-flicker-title">
+          <span></span> CALIBI.AI // NEURAL STUDIO v2.6
+        </div>
+        <div class="calibi-flicker-logs">
+          <div>> Initializing human-AI hybrid architecture...</div>
+          <div>> Loading multi-agent workflows & neural models...</div>
+          <div>> Calibrating design system & responsive layout...</div>
+          <div>> SYSTEM ONLINE. WELCOME TO CALIBI AI.</div>
+        </div>
+      </div>
+    `;
+    document.body.prepend(intro);
+  }
+
   function boot() {
     keepHeaderAlive();
     keepFooterAlive();
     removeHomeBrainLogo();
     updateServicesGrid();
     initAiAgentWidget();
+    initFlickerIntro();
     if (!isHomePage) {
       initHeroBrain();
       initPremiumHero();
