@@ -340,3 +340,31 @@ html.calibi-home-static .text-foreground{
   0%{opacity:.9;transform:translate(-50%,-50%) scale(1)}
   100%{opacity:0;transform:translate(-50%,-50%) scale(3.8)}
 }
+
+/* AI Agent Popup Widget */
+.calibi-ai-widget-container{position:fixed;bottom:1.5rem;right:1.5rem;z-index:2147483640;font-family:Inter,sans-serif}
+.calibi-ai-toggle-btn{display:flex;align-items:center;gap:.75rem;padding:.75rem 1.15rem;border-radius:999px;background:linear-gradient(135deg,#0284c7,#7c3aed);color:#f8fafc;font-weight:900;box-shadow:0 10px 30px rgba(56,189,248,.35),0 0 20px rgba(124,58,237,.3);border:1px solid rgba(255,255,255,.25);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+.calibi-ai-toggle-btn:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 16px 40px rgba(56,189,248,.5),0 0 30px rgba(124,58,237,.5)}
+.calibi-ai-avatar{font-size:1.25rem}
+.calibi-ai-status-dot{width:.6rem;height:.6rem;border-radius:999px;background:#34d399;box-shadow:0 0 10px #34d399}
+.calibi-ai-toggle-text{font-size:.92rem;letter-spacing:.02em}
+.calibi-ai-popup{position:absolute;bottom:4rem;right:0;width:340px;max-width:calc(100vw - 2rem);border-radius:1.2rem;background:linear-gradient(145deg,rgba(15,23,42,.96),rgba(3,7,18,.96));border:1px solid rgba(125,211,252,.25);box-shadow:0 25px 70px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(20px);overflow:hidden;animation:calibi-ai-pop .3s cubic-bezier(.2,.8,.2,1) both;display:flex;flex-direction:column}
+.calibi-ai-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.15rem;border-bottom:1px solid rgba(148,163,184,.15);background:rgba(2,6,23,.5)}
+.calibi-ai-title{display:flex;align-items:center;gap:.75rem}
+.calibi-ai-avatar-sm{font-size:1.4rem;width:2.2rem;height:2.2rem;border-radius:999px;background:rgba(56,189,248,.15);display:grid;place-items:center}
+.calibi-ai-title strong{display:block;color:#f8fafc;font-size:.95rem;font-weight:900}
+.calibi-ai-title span{display:block;color:#34d399;font-size:.72rem;font-weight:750}
+.calibi-ai-close{background:none;border:none;color:#94a3b8;font-size:1.4rem;cursor:pointer;padding:.2rem;transition:color .2s ease}
+.calibi-ai-close:hover{color:#f8fafc}
+.calibi-ai-body{padding:1.25rem;display:grid;gap:1rem}
+.calibi-ai-msg{padding:.9rem 1rem;border-radius:.9rem;background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.18);color:#dbeafe;font-size:.9rem;line-height:1.55}
+.calibi-ai-actions{display:grid;gap:.65rem}
+.calibi-ai-cta-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1rem;border-radius:.8rem;background:linear-gradient(135deg,#0284c7,#7c3aed);color:#f8fafc;font-weight:900;text-align:center;font-size:.9rem;box-shadow:0 10px 25px rgba(2,132,199,.35);transition:transform .2s ease,filter .2s ease}
+.calibi-ai-cta-btn:hover{transform:translateY(-2px);filter:brightness(1.15)}
+.calibi-ai-secondary-btn{display:flex;align-items:center;justify-content:center;padding:.7rem 1rem;border-radius:.8rem;background:rgba(255,255,255,.05);border:1px solid rgba(148,163,184,.2);color:#cbd5e1;font-weight:800;font-size:.85rem;text-align:center;transition:background .2s ease,color .2s ease}
+.calibi-ai-secondary-btn:hover{background:rgba(255,255,255,.1);color:#f8fafc}
+@keyframes calibi-ai-pop{0%{opacity:0;transform:translateY(16px) scale(.94)}100%{opacity:1;transform:translateY(0) scale(1)}}
+
+/* Hide redundant inline calendly / consultation sections */
+#calendly, .calibi-calendly-section { display: none !important; }
+

@@ -552,11 +552,89 @@
     window.addEventListener("resize", update);
   }
 
+  function initAiAgentWidget() {
+    if (document.querySelector(".calibi-ai-widget-container")) return;
+
+    const container = document.createElement("div");
+    container.className = "calibi-ai-widget-container";
+    container.innerHTML = `
+      <button class="calibi-ai-toggle-btn" aria-label="Open Calibi AI Assistant">
+        <span class="calibi-ai-avatar">🤖</span>
+        <span class="calibi-ai-status-dot"></span>
+        <span class="calibi-ai-toggle-text">AI Agent</span>
+      </button>
+      <div class="calibi-ai-popup" style="display: none;">
+        <div class="calibi-ai-header">
+          <div class="calibi-ai-title">
+            <span class="calibi-ai-avatar-sm">🤖</span>
+            <div>
+              <strong>Calibi AI Assistant</strong>
+              <span>Online | Ready to help</span>
+            </div>
+          </div>
+          <button class="calibi-ai-close" aria-label="Close">&times;</button>
+        </div>
+        <div class="calibi-ai-body">
+          <div class="calibi-ai-msg bot">
+            Hello! I'm your Calibi AI Assistant. Looking to automate your business or schedule a free consultation with our experts?
+          </div>
+          <div class="calibi-ai-actions">
+            <a href="https://calendly.com/prajwalen100/30min" target="_blank" rel="noopener noreferrer" class="calibi-ai-cta-btn">
+              📅 Book Free Consultation (30min)
+            </a>
+            <a href="services.html" class="calibi-ai-secondary-btn">Explore AI Services</a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(container);
+
+    const toggleBtn = container.querySelector(".calibi-ai-toggle-btn");
+    const popup = container.querySelector(".calibi-ai-popup");
+    const closeBtn = container.querySelector(".calibi-ai-close");
+
+    toggleBtn.addEventListener("click", () => {
+      const isVisible = popup.style.display === "flex";
+      popup.style.display = isVisible ? "none" : "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+    document.addEventListener("pointerdown", (e) => {
+      if (!container.contains(e.target)) {
+        popup.style.display = "none";
+      }
+    });
+
+    // Intercept consultation / schedule clicks globally to open Calendly
+    document.addEventListener("click", (e) => {
+      const target = e.target.closest("button, a, [role='button']");
+      if (!target) return;
+      const text = target.textContent || "";
+      const href = target.getAttribute("href") || "";
+      if (
+        text.toLowerCase().includes("consultation") ||
+        text.toLowerCase().includes("schedule") ||
+        text.toLowerCase().includes("book a free") ||
+        href.includes("#consultation") ||
+        href.includes("#calendly")
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.open("https://calendly.com/prajwalen100/30min", "_blank", "noopener,noreferrer");
+      }
+    }, true);
+  }
+
   function boot() {
     keepHeaderAlive();
     keepFooterAlive();
     removeHomeBrainLogo();
     updateServicesGrid();
+    initAiAgentWidget();
     if (!isHomePage) {
       initHeroBrain();
       initPremiumHero();
@@ -573,6 +651,7 @@
       window.setTimeout(() => {
         removeHomeBrainLogo();
         updateServicesGrid();
+        initAiAgentWidget();
         if (!isHomePage) {
           initHeroBrain();
           initPremiumHero();
