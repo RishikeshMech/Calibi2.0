@@ -678,7 +678,15 @@
   }
 
   function initLocalImagesEnhancement() {
-    const caseCards = document.querySelectorAll("#case-studies .glass-card, .glass-card");
+    const hero = document.querySelector(".mesh-gradient");
+    if (hero && !hero.dataset.bgSet) {
+      hero.dataset.bgSet = "true";
+      hero.style.backgroundImage = "linear-gradient(135deg, rgba(2, 6, 23, 0.88), rgba(4, 10, 26, 0.85)), url('assets/images/hero-bg.jpg')";
+      hero.style.backgroundSize = "cover";
+      hero.style.backgroundPosition = "center";
+    }
+
+    const caseCards = document.querySelectorAll("#case-studies .glass-card, #testimonials .glass-card, .glass-card");
     const images = [
       "assets/images/vramp-manufacturing.jpg",
       "assets/images/devionx-tech.jpg",
@@ -688,6 +696,8 @@
 
     caseCards.forEach((card, idx) => {
       if (card.querySelector(".calibi-case-img")) return;
+      // Only add to case study cards or featured containers
+      if (!card.closest("#case-studies") && !card.closest(".calibi-academy-main")) return;
       const imgPath = images[idx % images.length];
       const img = document.createElement("img");
       img.src = imgPath;
@@ -720,6 +730,9 @@
     initRevealFallback();
     initScrollProgress();
     initTouchFeedback();
+
+    const imgInterval = window.setInterval(initLocalImagesEnhancement, 300);
+    window.setTimeout(() => window.clearInterval(imgInterval), 6000);
 
     const delayedPasses = lowPowerDevice ? [600, 1800] : [350, 1000, 1800];
     delayedPasses.forEach((delay) => {
