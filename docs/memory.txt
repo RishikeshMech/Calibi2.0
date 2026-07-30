@@ -1,0 +1,294 @@
+=====================================================================
+CALIBI AI — WEBSITE DEEP SCAN & REDESIGN BRIEF
+Scanned: calibiai.com (Home, Services, Our Story, Academy)
+Purpose: Reference doc for theme/UI redesign. KEEP NAME + CONTENT SAME.
+=====================================================================
+
+------------------------------
+1. BRAND IDENTITY (DO NOT CHANGE)
+------------------------------
+Name: Calibi AI
+Domain: calibiai.com
+Logo text seen in footer: "CCalibi AI" (footer link text) — possible
+duplicate "C" typo in the live markup, worth a quick manual check in
+code, not a content rewrite.
+Tagline/positioning: "Premium AI Automation Solutions"
+Email: sales@calibiai.com
+Location: Hinjewadi Phase 1, Pune, Maharashtra 411057
+Copyright: © 2026 Calibi AI. All rights reserved.
+Brand voice: confident, enterprise/B2B, outcome-driven ("measurable
+results," "ROI," "practical," "clarity"). Keep this tone in any new
+microcopy you add (buttons, empty states, nav labels) so new UI
+elements don't clash with existing copy.
+
+------------------------------
+2. SITE MAP / INFORMATION ARCHITECTURE
+------------------------------
+- / (Home / index.html)
+- /services.html — Detailed Services
+- /story.html — Our Story
+- /academy.html — Calibi AI Academy (with #academy-contact anchor)
+
+Footer nav groups:
+  Services We Offer -> Business Automation, AI Consultation,
+    AI Development, AI Training (last one points to academy.html)
+  Company -> Our Story, Calibi AI Academy, Detailed Services,
+    Partnership Enquiry (academy.html#academy-contact)
+
+Note: All footer "Services We Offer" links point to the SAME
+services.html page (no deep anchors per service) — a UX gap you may
+want to fix structurally (anchors or sub-sections) without touching
+the actual service descriptions.
+
+------------------------------
+3. FULL CONTENT INVENTORY (preserve verbatim when re-theming)
+------------------------------
+
+--- HOME PAGE ---
+Hero H1: "Transform Your Business with AI Automation"
+Hero sub: "Enterprise-grade AI solutions that automate workflows,
+enhance customer experiences, and drive measurable results. Join 50+
+companies scaling with intelligent automation."
+CTAs: "Book a Free Consultation" (primary) / "View Case Studies" (secondary)
+Trust bar label: "TRUSTED BY" -> Clevrr AI, DevionX, Colega AI
+
+Section: "AI Solutions for Every Need"
+Sub: "Comprehensive AI automation services designed to transform
+your business operations"
+7 service cards, each with: name, description, 4 feature bullets,
+1 highlighted stat line. Cards:
+  1. AI Chatbots — 85% reduction in support tickets
+  2. Voice Agents — 70% faster call resolution
+  3. Multi-Agent Systems — 3x productivity increase
+  4. Business Automation — 60% time savings
+  5. Content Automation — 10x content output
+  6. Pre-Built Solutions — Deploy in 48 hours
+  7. AI Consultation — 200% average ROI
+
+Section: "Proven Results Across Industries"
+3 case study cards (carousel — "Previous slide / Next slide" controls):
+  1. VRAMP Automations (Manufacturing) — Challenge/Solution/Quote
+     (Swapnil Gulhane, Founder) + 3 before/after metrics
+     (response time, satisfaction, tickets/day)
+  2. DevionX Technologies (Enterprise solutions) — Challenge/Solution/
+     Quote (Ajay Bade, CEO) + 3 before/after metrics (processing time,
+     accuracy, costs)
+  3. Dermaspace Clinic (Healthcare) — Challenge/Solution/Quote
+     (Dr. Patil, Founder) + 3 before/after metrics (no-shows, admin
+     time, patient satisfaction)
+Each card has a "Read Full Case Study" link (verify destination URLs
+exist — not confirmed reachable in this scan).
+
+Section: "Simple Process, Powerful Results"
+3-step numbered process (01/02/03), each with title, subtitle,
+description, 4-5 bullets, and a "Duration:" line:
+  01 Consultation — Discover & Strategize — 1-2 weeks
+  02 Development — Build & Train — 4-8 weeks
+  03 Deployment — Launch & Optimize — Ongoing
+
+Section: "Ready to Transform Your Business?"
+3 feature chips: 30-Minute Call / Virtual Meeting / Free Assessment
+"What to Expect" bullet list (5 items)
+CTA: "Schedule Your Free Consultation"
+Microcopy: "Available slots fill up quickly. Book now to secure your spot."
+
+Section: "Trusted by Industry Leaders" — testimonial carousel, 4 quotes:
+  1. Kartikey Vyas, Founder, Prakior Solutions
+  2. Ajay Bade, Founder, DevionX Technologies (near-duplicate of the
+     quote used in the DevionX case study card above — repeated copy)
+  3. Dr. Poonam Patil, Founder, Dermaspace Clinic
+  4. Raghav Mishra, co-Founder, Clevvr Ai — NOTE: quote text says
+     "Partnering with AtoomAi has been one of the best decisions..."
+     but the name/company is credited as Clevvr Ai. This looks like a
+     copy-paste mismatch in the source content (company name in the
+     quote body doesn't match the attributed company). Flagging for
+     you to verify with the original source — not changed here.
+Also note: trust-bar logo says "Clevrr AI" (2x r) while testimonial
+attribution says "Clevvr Ai" (2x v) — inconsistent spelling of the
+same client across the page.
+
+Section: "Frequently Asked Questions" — accordion, 10 questions
+(answers are collapsed/not present in the static scan — confirm in
+browser that each has real answer content, since none rendered here):
+  1. What types of businesses can benefit from AI automation?
+  2. How long does implementation typically take?
+  3. Do I need technical expertise to use your AI solutions?
+  4. How do you ensure data security and privacy?
+  5. What kind of ROI can I expect?
+  6. Can your AI solutions integrate with our existing systems?
+  7. What happens if the AI makes a mistake?
+  8. Do you offer ongoing support and maintenance?
+  9. How customizable are your AI solutions?
+  10. What's the difference between your chatbots and voice agents?
+
+Closing: "Still have questions? Schedule a call with our team"
+
+Footer: logo text, description line ("Premium AI automation,
+development, consulting, and training for businesses, colleges, and
+corporate teams."), email, address, nav groups (see section 2).
+
+--- SERVICES PAGE (services.html) ---
+Eyebrow: "Detailed Services"
+H1: "AI Services Built for Real Business Outcomes"
+Sub: "From strategy to deployment, Calibi AI helps businesses,
+institutions, and teams adopt AI through practical systems that save
+time, improve operations, and create measurable value."
+
+4 service blocks, each with intro sentence + 4 bullets:
+  1. Business Automation
+  2. AI Consultation
+  3. AI Development
+  4. AI Training for Colleges & Corporates
+
+Section: "How We Work"
+Intro paragraph, then 3-step mini process: Discover / Design / Deploy
+(each with 1-sentence description) — this duplicates the Home page's
+3-step process but with different framing (Discover/Design/Deploy vs
+Consultation/Development/Deployment). Consider whether these two
+process explanations should be visually unified or kept distinct in
+the new theme.
+
+--- OUR STORY PAGE (story.html) ---
+Eyebrow: "Our Story"
+H1: "Making AI Practical for Businesses and Learners"
+Sub: "Calibi AI exists to turn AI from a buzzword into working
+systems, trained teams, and real operational advantage."
+
+4 sections, each with heading + intro sentence + 3 bullets:
+  1. Why We Started
+  2. What We Believe
+  3. Who We Help
+  4. Where We Are Going
+
+Closing section: "The Calibi AI Promise"
+Intro sentence + 3 value cards:
+  - Built Around Clarity
+  - Powered by Execution
+  - Growing Through Academy
+
+--- ACADEMY PAGE (academy.html) ---
+Eyebrow: "Calibi AI Academy"
+H1: "AI Training Partnerships for Colleges & Corporates"
+Sub: "We partner with colleges, departments, placement cells,
+innovation clubs, and corporate teams to deliver practical AI
+workshops that turn learners into builders."
+
+Tag chips: Prompt Engineering / Automation Labs / AI Product Building /
+Career Skills
+
+Feature block: "Hands-on AI Workshops" + 3 format chips:
+  1-3 Day Bootcamps / Live Project Labs / Custom Programs
+
+4 sections with heading + intro + 3-4 bullets:
+  1. College Partnerships
+  2. Corporate Training
+  3. Workshop Format
+  4. Partner Outcomes
+
+CTA section: "Bring Calibi AI Academy to your campus or company"
+Sub: "Share a few details and we will prepare the right workshop,
+bootcamp, or partnership format for your institution or team."
+Tag chips: College workshops / Corporate AI training / Faculty and
+team enablement
+Contact: sales@calibiai.com, Hinjewadi Phase 1, Pune, Maharashtra 411057
+
+Form fields: Your Name, Email, Phone Number, College / Company,
+Partnership Type (select: College AI Workshop / Corporate AI Training /
+Bootcamp Partnership / Custom AI Program), Expected Participants,
+Message
+Submit button: "Send Partnership Enquiry"
+Helper text: "Submits directly to Calibi AI Academy partnerships."
+
+------------------------------
+4. INFERRED CURRENT UX PATTERNS (from structure, since this scan
+   is text/content-based and did not capture live CSS/pixels)
+------------------------------
+- Standard SaaS/agency template shape: sticky-style hero -> logo/trust
+  bar -> feature grid -> case-study carousel -> numbered process ->
+  consultation CTA block -> testimonial carousel -> FAQ accordion ->
+  footer.
+- Heavy reliance on numeric proof points (85%, 70%, 3x, 60%, 10x,
+  48 hours, 200% ROI, 6x, before/after metric pairs) — this is a core
+  conversion device for the brand; the new theme should give these
+  numbers strong visual emphasis (large numerals, contrast color,
+  maybe animated count-up) rather than bury them in body text.
+- Repeated 3-step "process" motif appears twice (Home + Services)
+  with different labels — an opportunity for a single reusable
+  timeline/stepper component in the new design system.
+- Two carousels on the homepage (case studies + testimonials) —
+  make sure the new theme carries over working prev/next controls,
+  not just static cards.
+- FAQ accordion pattern — confirm each item expands to an answer in
+  the live site; the redesign should preserve the accordion
+  interaction, not just the questions.
+- Multiple CTA touchpoints funneling to the same action ("Book a
+  Free Consultation" / "Schedule Your Free Consultation" / "Schedule
+  a call with our team") — keep this repetition; it's a deliberate
+  conversion pattern, just re-skin the buttons.
+
+------------------------------
+5. WHAT THIS SCAN COULD NOT CAPTURE
+------------------------------
+This was a content/structure fetch, not a rendered-browser or
+CSS-level scan, so it does NOT include: exact color hex codes, font
+families, spacing/grid values, image assets, icon set, or animation
+details. If you want the new theme to deliberately contrast with (or
+selectively keep) the current visual system, the fastest next step is
+either:
+  a) Send screenshots of key sections (hero, service cards, case
+     study cards, testimonial cards, FAQ, footer) so I can do a
+     visual teardown, or
+  b) Share the live CSS/stylesheet so I can extract the current
+     palette and type scale exactly.
+
+------------------------------
+6. THEME DIRECTIONS TO CONSIDER (visual layer only — content unchanged)
+------------------------------
+Given the brand is "premium," "enterprise-grade," B2B AI automation,
+three directions that typically work well without touching copy:
+
+A) Dark "AI-native" theme
+   - Near-black background (#0A0A0F–#111116), soft gradient mesh or
+     particle/grid backdrop behind the hero
+   - One accent (electric blue, violet, or teal) reserved for CTAs,
+     stat numbers, and active states only
+   - Glass-panel cards (subtle blur + 1px border) for the 7 service
+     cards and case-study cards
+   - Large, confident sans-serif for numerals (stat call-outs) to
+     make the 85%/70%/3x proof points pop
+
+B) Clean enterprise light theme
+   - White/off-white background, one strong brand color for CTAs and
+     section eyebrows, dark charcoal text (avoid pure black)
+   - Card-based grid with soft shadows instead of borders
+   - Editorial-style large type for H1s, tighter type for the dense
+     bullet lists so the page doesn't feel text-heavy
+
+C) Warm "practical AI" theme (matches the "practical, human, clarity"
+   language from the Story page)
+   - Off-white/cream base, one warm accent + one cool accent
+   - Rounded corners, friendlier iconography, softer shadows
+   - Good fit if the brand wants to feel less "generic AI startup"
+     and more approachable for the Academy/education audience
+
+Whichever direction, keep the SAME section order and SAME copy — this
+brief is written so you (or another AI/design tool) can restyle
+components without needing to re-derive the content.
+
+------------------------------
+7. QUICK-WIN FIXES TO FLAG (not content changes — data/markup bugs)
+------------------------------
+- Footer logo text reads "CCalibi AI" — check for a duplicated
+  character in the markup.
+- Client name spelled two ways: "Clevrr AI" (trust bar) vs "Clevvr Ai"
+  (testimonial attribution) — confirm correct spelling with the client.
+- Testimonial #4 body text references "AtoomAi" while attributed to
+  "Clevvr Ai" — confirm which company this quote actually belongs to.
+- All 4 "Services We Offer" footer links point to the same
+  services.html with no anchors — consider linking directly to each
+  service's section.
+- FAQ answers were not present in the fetched content — confirm
+  they render correctly in the live accordion.
+=====================================================================
+END OF FILE
+=====================================================================
