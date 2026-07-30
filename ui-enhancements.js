@@ -158,32 +158,53 @@
 
   const serviceCards = [
     {
+      title: "AI Chatbots",
+      description: "Intelligent conversational agents that understand context, integrate with CRMs, and provide 24/7 human-like interactions.",
+      features: ["Natural language processing", "Multi-language support", "24/7 automated availability", "Deep CRM & tool integration"],
+      metric: "85% reduction in support tickets",
+      icon: "message"
+    },
+    {
+      title: "Voice Agents",
+      description: "Advanced voice AI for phone systems, customer service, automated calling, and real-time speech analytics.",
+      features: ["Real-time speech recognition", "Emotion detection & tone tuning", "Call routing automation", "Comprehensive voice analytics"],
+      metric: "70% faster call resolution",
+      icon: "mic"
+    },
+    {
+      title: "Multi-Agent Systems",
+      description: "Collaborative AI networks designed to handle complex multi-step reasoning, research, and enterprise operations.",
+      features: ["Autonomous task delegation", "Cross-system orchestration", "Complex reasoning pipelines", "Secure enterprise scaling"],
+      metric: "Enterprise-grade autonomous workflows",
+      icon: "cpu"
+    },
+    {
       title: "Business Automation",
       description: "End-to-end automation for operations, sales, customer success, reporting, and internal workflows.",
-      features: ["Workflow design", "CRM and tool integration", "Sales and support automation", "Live dashboards"],
-      metric: "60% time savings across core processes",
+      features: ["Workflow design & mapping", "CRM and tool integration", "Sales and support automation", "Live executive dashboards"],
+      metric: "60% time savings across processes",
       icon: "workflow"
     },
     {
+      title: "Content Automation",
+      description: "Scalable content generation, multi-format localization, and automated publishing pipelines tailored for brands.",
+      features: ["Automated content pipelines", "Brand voice alignment", "Multi-format localization", "Scheduled publishing workflows"],
+      metric: "10x faster content deployment",
+      icon: "file"
+    },
+    {
+      title: "Pre-Built Solutions",
+      description: "Enterprise-ready AI solutions deployable in 48 hours with minimal setup and maximum operational ROI.",
+      features: ["Rapid 48-hour deployment", "Pre-tested automation modules", "Zero friction onboarding", "Guaranteed ROI templates"],
+      metric: "Live and generating ROI in 48 hrs",
+      icon: "zap"
+    },
+    {
       title: "AI Consultation",
-      description: "Strategic AI guidance to find the highest ROI use cases, choose tools, and build a practical roadmap.",
-      features: ["AI readiness audit", "ROI and use-case mapping", "Implementation roadmap", "Team enablement"],
+      description: "Strategic AI guidance to find highest ROI use cases, choose tools, and build practical implementation roadmaps.",
+      features: ["AI readiness audit", "ROI and use-case mapping", "Implementation roadmap", "Team enablement sessions"],
       metric: "200% average ROI roadmap potential",
       icon: "users"
-    },
-    {
-      title: "AI Development",
-      description: "Custom AI products, internal copilots, agents, dashboards, and integrations built for your business.",
-      features: ["Custom AI apps", "Agentic workflows", "API and data integration", "Secure deployment"],
-      metric: "Production-ready AI systems",
-      icon: "code"
-    },
-    {
-      title: "AI Training for Colleges & Corporates",
-      description: "Premium hands-on AI training programs for students, teams, founders, and enterprise departments.",
-      features: ["Role-based workshops", "Prompting and automation", "Live project labs", "Certification-ready sessions"],
-      metric: "Practical AI skills from day one",
-      icon: "graduation"
     }
   ];
 
@@ -192,10 +213,15 @@
       workflow: '<rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect>',
       users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>',
       code: '<path d="m16 18 6-6-6-6"></path><path d="m8 6-6 6 6 6"></path><path d="m14.5 4-5 16"></path>',
-      graduation: '<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>'
+      graduation: '<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>',
+      message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>',
+      mic: '<path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line>',
+      cpu: '<rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M20 15h2"></path><path d="M2 9h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path>',
+      zap: '<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>',
+      file: '<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline>'
     };
 
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[type]}</svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[type] || icons.workflow}</svg>`;
   }
 
   function renderServiceCard(card, index) {
