@@ -1,0 +1,237 @@
+/* Mobile responsiveness patch for Calibi exported pages
+   This file intentionally avoids destructive global overrides. */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.container,
+[class*="max-w-"] {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Keep decorative absolute layers from causing side-scroll only. */
+.mesh-gradient > .absolute.inset-0 {
+  overflow: clip;
+  pointer-events: none;
+}
+
+/* Tablet and below */
+@media (max-width: 900px) {
+  .has-calibi-header {
+    padding-top: 5.4rem;
+  }
+
+  .calibi-site-header {
+    width: calc(100% - 1rem) !important;
+    top: 0.5rem !important;
+    border-radius: 1rem;
+    padding: 0.5rem 0.55rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .calibi-nav {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    order: 3;
+    justify-content: center;
+  }
+
+  .calibi-nav a {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.68rem;
+  }
+
+  .mesh-gradient {
+    min-height: auto !important;
+    padding-top: 7rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .calibi-premium-hero .container {
+    padding-top: 1.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .calibi-hero-content h1 {
+    font-size: clamp(2.1rem, 10vw, 3.2rem) !important;
+    line-height: 1.04 !important;
+  }
+
+  .calibi-hero-content p {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .calibi-hero-actions {
+    width: 100%;
+    flex-direction: column !important;
+  }
+
+  .calibi-hero-actions button {
+    width: 100%;
+    min-height: 3.1rem;
+    padding-inline: 1.2rem !important;
+    font-size: 0.94rem !important;
+  }
+
+  .calibi-hero-stats {
+    grid-template-columns: 1fr !important;
+    max-width: 24rem;
+    margin-top: 1.4rem;
+  }
+
+  .text-5xl,
+  .md\:text-7xl {
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .text-4xl,
+  .md\:text-5xl {
+    font-size: clamp(1.6rem, 7vw, 2.4rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .text-3xl {
+    font-size: clamp(1.3rem, 5.8vw, 1.8rem) !important;
+  }
+
+  .text-2xl {
+    font-size: clamp(1.15rem, 5.2vw, 1.45rem) !important;
+  }
+
+  .text-xl {
+    font-size: clamp(0.98rem, 4.2vw, 1.15rem) !important;
+  }
+
+  .py-24 {
+    padding-top: 3.8rem !important;
+    padding-bottom: 3.8rem !important;
+  }
+
+  .px-4 {
+    padding-left: 0.9rem !important;
+    padding-right: 0.9rem !important;
+  }
+
+  .gap-8 {
+    gap: 1rem !important;
+  }
+
+  .calibi-services-grid {
+    gap: 0.9rem !important;
+  }
+
+  .calibi-feature-card {
+    min-height: auto !important;
+    padding: 1.15rem !important;
+  }
+
+  .calibi-feature-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .calibi-feature-card p,
+  .calibi-detail-card p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .calibi-page-grid,
+  .calibi-footer-inner,
+  .calibi-contact-section,
+  .calibi-contact-form,
+  .calibi-form-row,
+  .calibi-footer-contact,
+  .grid.md\:grid-cols-2,
+  .grid.md\:grid-cols-3,
+  .grid.lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Carousels: keep nav arrows inside viewport */
+  #case-studies .-left-12,
+  #testimonials .-left-12 {
+    left: 0.25rem !important;
+  }
+
+  #case-studies .-right-12,
+  #testimonials .-right-12 {
+    right: 0.25rem !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 600px) {
+  .has-calibi-header {
+    padding-top: 5.8rem;
+  }
+
+  .calibi-brand-mark {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  .calibi-brand {
+    gap: 0.45rem;
+    padding: 0.15rem 0.35rem 0.15rem 0.2rem;
+  }
+
+  .calibi-nav a {
+    font-size: 0.74rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .calibi-hero-badge {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.08em;
+  }
+
+  .calibi-hero-actions button {
+    font-size: 0.88rem !important;
+  }
+
+  .glass-card,
+  .calibi-detail-card {
+    border-radius: 0.9rem !important;
+  }
+
+  .calibi-site-footer {
+    padding: 2.2rem 0.9rem 1.2rem !important;
+  }
+}
+
+/* Respect reduced motion and low-power preference from browser hints. */
+@media (prefers-reduced-motion: reduce) {
+  .calibi-floating-chips,
+  .calibi-hero-ambient,
+  .calibi-brain-orbit,
+  body::before,
+  .mesh-gradient::before,
+  .mesh-gradient::after {
+    display: none !important;
+  }
+}
+
+/* Runtime low-power mode from JS */
+html.calibi-lite *,
+html.calibi-lite *::before,
+html.calibi-lite *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+}
